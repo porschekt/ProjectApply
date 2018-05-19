@@ -16,12 +16,12 @@ public class RenderableHolder {
 	private Comparator<IRenderable> comparator;
 	// various image plz check the image first before using (like to find its size /
 	// how it looks etc)
-	public static Image ship1, ship2, ship3, ship4, ship5, eBig, eBoss, eEyeball, eBug, eSquid, eWing, bullet,
+	public static Image dragon1, eBig, eBoss, eEyeball, eBug, eSquid, eWing, bullet,
 			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, missile, exploArr[], background,randomBox, backgroundGS, backgroundGO;
 	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic, missileLaunch;
 	public static Font inGameFont, inGameFontSmall;
 
-	public static Image[] playerShip;
+	public static Image[] dragon;
 	public static AudioClip[] explosions;
 
 	static {
@@ -43,13 +43,9 @@ public class RenderableHolder {
 	}
 
 	public static void loadResource() {
-		ship1 = new Image(ClassLoader.getSystemResource("player/p1.gif").toString());
-		ship2 = new Image(ClassLoader.getSystemResource("player/p2.gif").toString());
-		ship3 = new Image(ClassLoader.getSystemResource("player/p3.gif").toString());
-		ship4 = new Image(ClassLoader.getSystemResource("player/p4.gif").toString());
-		ship5 = new Image(ClassLoader.getSystemResource("player/p5.gif").toString());
+		dragon1 = new Image(ClassLoader.getSystemResource("player/p1.gif").toString());
 
-		playerShip = new Image[] { ship1, ship2, ship3, ship4, ship5 };
+		dragon = new Image[] { dragon1 }; // if add more dragon
 
 		eBig = new Image(ClassLoader.getSystemResource("enemy/eBig.gif").toString());
 		eBoss = new Image(ClassLoader.getSystemResource("enemy/eBoss.gif").toString());

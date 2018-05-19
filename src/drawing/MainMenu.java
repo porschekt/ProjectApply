@@ -31,9 +31,9 @@ public class MainMenu extends Canvas {
 		gc.setTextAlign(TextAlignment.CENTER);
 		gc.setFill(Color.GREENYELLOW);
 		gc.setFont(Font.font(70));
-		gc.fillText("Knight Run", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT/4);
+		gc.fillText("Dragon Journey", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT/4);
 		gc.setFont(Font.font(40));
-		gc.fillText("Press Enter to Start", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 3 / 4);
+		gc.fillText("Let's start with Enter!!!", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 3 / 4);
 
 		this.addKeyEventHandler();
 	}
