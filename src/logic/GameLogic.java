@@ -190,13 +190,13 @@ public class GameLogic {
 			// System.out.println("\t\tGacha: " + gachaPull);
 			if (gachaPull <= 32.5) {
 				addNewObject(new TripleGunBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.hpBox.getWidth())));
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.randomBox.getWidth())));
 			} else if (gachaPull <= 55) {
 				addNewObject(new MissileBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.hpBox.getWidth())));
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.randomBox.getWidth())));
 			} else {
 				addNewObject(new HPBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.hpBox.getWidth())));
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.randomBox.getWidth())));
 			}
 		}
 

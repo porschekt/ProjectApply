@@ -9,8 +9,8 @@ public class MissileBox extends Items {
 
 	public MissileBox(double x) {
 		super(ThreadLocalRandom.current().nextDouble(1, 5));
-		this.width = RenderableHolder.tripleGunBox.getWidth();
-		this.height = RenderableHolder.tripleGunBox.getHeight();
+		this.width = RenderableHolder.randomBox.getWidth();
+		this.height = RenderableHolder.randomBox.getHeight();
 		this.visible = true;
 		this.destroyed = false;
 		this.x = x;
@@ -21,7 +21,7 @@ public class MissileBox extends Items {
 	@Override
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
-		gc.drawImage(RenderableHolder.missileBox, x, y);
+		gc.drawImage(RenderableHolder.randomBox, x, y);
 	}
 
 	@Override

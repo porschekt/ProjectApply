@@ -11,8 +11,8 @@ public class HPBox extends Items {
 	public HPBox(double x) {
 		super(ThreadLocalRandom.current().nextDouble(1, 5));
 		this.HPStorage = ThreadLocalRandom.current().nextDouble(50, 500);
-		this.width = RenderableHolder.hpBox.getWidth();
-		this.height = RenderableHolder.hpBox.getHeight();
+		this.width = RenderableHolder.randomBox.getWidth();
+		this.height = RenderableHolder.randomBox.getHeight();
 		this.visible = true;
 		this.destroyed = false;
 		this.x = x;
@@ -23,7 +23,7 @@ public class HPBox extends Items {
 	@Override
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
-		gc.drawImage(RenderableHolder.hpBox, x, y);
+		gc.drawImage(RenderableHolder.randomBox, x, y);
 	}
 
 	@Override

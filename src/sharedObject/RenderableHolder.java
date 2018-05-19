@@ -17,8 +17,7 @@ public class RenderableHolder {
 	// various image plz check the image first before using (like to find its size /
 	// how it looks etc)
 	public static Image ship1, ship2, ship3, ship4, ship5, eBig, eBoss, eEyeball, eBug, eSquid, eWing, bullet,
-			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, missile, exploArr[], background, hpBox,
-			tripleGunBox, missileBox, backgroundGS, backgroundGO;
+			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, missile, exploArr[], background,randomBox, backgroundGS, backgroundGO;
 	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic, missileLaunch;
 	public static Font inGameFont, inGameFontSmall;
 
@@ -74,10 +73,8 @@ public class RenderableHolder {
 
 		background = new Image(ClassLoader.getSystemResource("background/bg1.png").toString());
 		backgroundGS = new Image(ClassLoader.getSystemResource("background/bg2.png").toString());
-
-		hpBox = new Image(ClassLoader.getSystemResource("items/hpBox.png").toString());
-		tripleGunBox = new Image(ClassLoader.getSystemResource("items/tripleGunBox.png").toString());
-		missileBox = new Image(ClassLoader.getSystemResource("items/missileBox.png").toString());
+		
+		randomBox= new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 
 		bgm = new AudioClip(ClassLoader.getSystemResource("song/Corneria.wav").toExternalForm());
 		laser = new AudioClip(ClassLoader.getSystemResource("song/laser.wav").toExternalForm());
