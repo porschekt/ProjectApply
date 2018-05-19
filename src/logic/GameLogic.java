@@ -56,10 +56,16 @@ public class GameLogic {
 		pendingBullet = new ConcurrentLinkedQueue<>();
 
 	}
-
+	
 	protected void addNewObject(Entity entity) {
 		gameObjectContainer.add(entity);
 		RenderableHolder.getInstance().add(entity);
+	}
+	
+	protected void winGame() {
+		this.isGameRunning = false;
+		this.gameObjectContainer.clear();
+		this.pendingBullet.clear();
 	}
 
 	public void startGame() {
@@ -141,8 +147,8 @@ public class GameLogic {
 		Random r = new Random();
 		this.maxEnemyCap = 5 + stageLevel;
 		// check score to spawn boss first
-		if ((Score.score >= 100 * stageLevel * 1.5 && Score.score <= 100 * stageLevel * 1.5 + 30) && Score.score != 0
-				&& !isBossAlive) {
+		//if didnt check it will spaen a lot of boss lol
+		if (Score.score == 300 && !isBossAlive) {
 			eboss = new EBoss(this);
 			addNewObject(eboss);
 		}

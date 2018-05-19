@@ -35,7 +35,7 @@ public class Player extends CollidableEntity implements IRenderable {
 		this.z = 0;
 
 		Random ran = new Random();
-		int x = ran.nextInt(5); // random player ship
+		int x = ran.nextInt(1); // random player ship
 		playerImage = RenderableHolder.dragon[x];
 
 		this.gameLogic = gameLogic;
