@@ -16,9 +16,9 @@ import window.SceneManager;
 
 public class MainMenu extends Canvas {
 	private static final Font TITLE_FONT = Font
-			.loadFont(ClassLoader.getSystemResource("font/Digital_tech.otf").toString(), 70);
+			.loadFont(ClassLoader.getSystemResource("font/Mouse.otf").toString(), 50);
 	private static final Font MENU_FONT = Font
-			.loadFont(ClassLoader.getSystemResource("font/Digital_tech.otf").toString(), 40);
+			.loadFont(ClassLoader.getSystemResource("font/Mouse.otf").toString(), 35);
 	private AudioClip music = RenderableHolder.mainMenuMusic;
 
 	public MainMenu() {
@@ -27,13 +27,14 @@ public class MainMenu extends Canvas {
 		music.play();
 		
 		GraphicsContext gc = this.getGraphicsContext2D();
-		gc.drawImage(RenderableHolder.background, 0, 0, SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
+		gc.drawImage(RenderableHolder.backgroundMM, 0, 0, SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
+//		gc.drawImage(RenderableHolder.backgroundMM2, SceneManager.SCENE_WIDTH/2-100, SceneManager.SCENE_HEIGHT/2-170 , SceneManager.SCENE_WIDTH/3, SceneManager.SCENE_HEIGHT/3);
 		gc.setTextAlign(TextAlignment.CENTER);
-		gc.setFill(Color.GREENYELLOW);
-		gc.setFont(Font.font(70));
-		gc.fillText("Dragon Journey", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT/4);
-		gc.setFont(Font.font(40));
-		gc.fillText("Let's start with Enter!!!", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 3 / 4);
+		gc.setFill(Color.DARKRED);
+		gc.setFont(TITLE_FONT);
+		gc.fillText("DRAGON WING", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT/4);
+		gc.setFont(MENU_FONT);
+		gc.fillText("Press Enter to Start", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 3 / 4+35);
 
 		this.addKeyEventHandler();
 	}

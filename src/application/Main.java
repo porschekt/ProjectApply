@@ -15,7 +15,6 @@ public class Main extends Application {
 			SceneManager.gotoMainMenu();
 			primaryStage.setTitle("Dragon Journey");
 			primaryStage.centerOnScreen();
-
 			// this will stop all thread / free all memory when we click exit button of
 			// windows (X)
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {

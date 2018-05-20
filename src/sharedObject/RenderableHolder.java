@@ -16,7 +16,7 @@ public class RenderableHolder {
 	private Comparator<IRenderable> comparator;
 	// various image plz check the image first before using (like to find its size /
 	// how it looks etc)
-	public static Image dragon1, eBig, eBoss, eEyeball, eBug, eSquid, eWing, bullet,
+	public static Image dragon1, eBig, eBoss, eEyeball, eBug, eSquid, eWing, bullet, backgroundMM, backgroundMM2,
 			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, missile, exploArr[], background,randomBox, backgroundGS, backgroundGO;
 	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic, missileLaunch;
 	public static Font inGameFont, inGameFontSmall;
@@ -67,15 +67,16 @@ public class RenderableHolder {
 		roundBulletR = new Image(ClassLoader.getSystemResource("bullet/roundBulletR.png").toString());
 		roundBulletP = new Image(ClassLoader.getSystemResource("bullet/roundBulletP.png").toString());
 
-		background = new Image(ClassLoader.getSystemResource("background/bg1.png").toString());
-		backgroundGS = new Image(ClassLoader.getSystemResource("background/bg2.png").toString());
+		background = new Image(ClassLoader.getSystemResource("background/bg2.png").toString());
+		backgroundMM = new Image(ClassLoader.getSystemResource("background/DragonCave.jpg").toString());
+//		backgroundMM2 = new Image(ClassLoader.getSystemResource("background/Title_Dragon.png").toString());
 		
 		randomBox= new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 
-		bgm = new AudioClip(ClassLoader.getSystemResource("song/Corneria.wav").toExternalForm());
+		bgm = new AudioClip(ClassLoader.getSystemResource("song/GameScene.mp3").toExternalForm());
 		laser = new AudioClip(ClassLoader.getSystemResource("song/laser.wav").toExternalForm());
 		laser.setVolume(0.35);
-		gameOverMusic = new AudioClip(ClassLoader.getSystemResource("song/GameOver.wav").toExternalForm());
+		gameOverMusic = new AudioClip(ClassLoader.getSystemResource("song/GameOver.mp3").toExternalForm());
 		mainMenuMusic = new AudioClip(ClassLoader.getSystemResource("song/MainMenu.mp3").toExternalForm());
 		explosion = new AudioClip(ClassLoader.getSystemResource("song/Explosion.wav").toExternalForm());
 		explosion2 = new AudioClip(ClassLoader.getSystemResource("song/Explosion2.wav").toExternalForm());

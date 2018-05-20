@@ -18,9 +18,9 @@ import window.SceneManager;
 public class GameOverScreen extends Canvas {
 
 	private static final Font TITLE_FONT = Font
-			.loadFont(ClassLoader.getSystemResource("font/Digital_tech.otf").toString(), 70);
+			.loadFont(ClassLoader.getSystemResource("font/HACKED.ttf").toString(), 70);
 	private static final Font SCORE_FONT = Font
-			.loadFont(ClassLoader.getSystemResource("font/Digital_tech.otf").toString(), 40);
+			.loadFont(ClassLoader.getSystemResource("font/HACKED.ttf").toString(), 40);
 	private AudioClip music = RenderableHolder.gameOverMusic;
 
 	public GameOverScreen() {
