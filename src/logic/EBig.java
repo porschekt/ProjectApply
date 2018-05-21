@@ -12,7 +12,7 @@ public class EBig extends Enemy {
 	private GameLogic gameLogic;
 
 	public EBig(GameLogic gameLogic) {
-		super(270, 0.5);
+		super(1000, 0.1);
 		this.width = RenderableHolder.eBig.getWidth();
 		this.height = RenderableHolder.eBig.getHeight();
 		yOffset = 0;
@@ -20,8 +20,10 @@ public class EBig extends Enemy {
 		this.destroyed = false;
 		this.x = (SceneManager.SCENE_WIDTH - this.width) / 2.0;
 		this.y = -this.height;
-		this.collideDamage = 30;
+		this.collideDamage = 1000;
 		this.gameLogic = gameLogic;
+		
+		GameLogic.isBigAlive = true;
 	}
 
 	@Override

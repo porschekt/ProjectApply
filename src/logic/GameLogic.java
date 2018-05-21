@@ -25,6 +25,7 @@ public class GameLogic {
 	private int maxEnemyCap;
 	public static int currentEnemyNum;
 	public static boolean isBossAlive;
+	public static boolean isBigAlive;
 	private int stageLevel;
 
 	private long nextItemsSpawnTime;
@@ -43,6 +44,7 @@ public class GameLogic {
 		GameLogic.currentEnemyNum = 0;
 		stageLevel = 1;
 		GameLogic.isBossAlive = false;
+		GameLogic.isBigAlive = false;
 
 		RenderableHolder.getInstance().add(new Background());
 		RenderableHolder.getInstance().add(new Score());
@@ -147,11 +149,16 @@ public class GameLogic {
 		Random r = new Random();
 		this.maxEnemyCap = 5 + stageLevel;
 		// check score to spawn boss first
-		//if didn't check it will spawn a lot of boss lol
+		//if didn't check it will spawn a lot of boss
+		if (Score.score == 500 && !isBigAlive) {
+			ebig = new EBig(this);
+			addNewObject(ebig);
+		}
 		if (Score.score == 300 && !isBossAlive) {
 			eboss = new EBoss(this);
 			addNewObject(eboss);
 		}
+		
 		if (Score.score >= 100 * stageLevel * 1.5) {
 			stageLevel++;
 		}
@@ -173,13 +180,11 @@ public class GameLogic {
 			} else if (chance < 85) {
 				addNewObject(new EEyeball(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eEyeball.getWidth())));
-			} else if (chance < 95) {
+			} else  {
 				addNewObject(new EWing(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eEyeball.getWidth())));
-			} else {
-				ebig = new EBig(this);
-				addNewObject(ebig);
 			}
+			
 		}
 
 	}

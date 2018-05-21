@@ -30,12 +30,12 @@ public class Player extends CollidableEntity implements IRenderable {
 
 	public Player(GameLogic gameLogic) {
 		// TODO Auto-generated constructor stub
-		super(1000, 20);
+		super(2500, 20);
 		this.originalHp = this.hp;
 		this.z = 0;
 
 		Random ran = new Random();
-		int x = ran.nextInt(1); // random player ship
+		int x = ran.nextInt(1); // random dragon
 		playerImage = RenderableHolder.dragon[x];
 
 		this.gameLogic = gameLogic;
@@ -88,25 +88,25 @@ public class Player extends CollidableEntity implements IRenderable {
 		gc.setFill(Color.GREENYELLOW);
 		FontLoader fontLoader = Toolkit.getToolkit().getFontLoader();
 		if (missile > 0 && gunMode == 1) {
-			String remainMissile = "Missile: " + Integer.toString(this.missile);
+			String remainMissile = "Power Attack: " + Integer.toString(this.missile);
 			// double remainMissile_width = fontLoader.computeStringWidth(remainMissile,
 			// gc.getFont());
 			double remainMissile_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
 			gc.fillText(remainMissile, 10, 10 + remainMissile_height);
 
-			String TripleGun = "Triple Gun: " + Long.toString((this.TripleGunTimeOut - System.nanoTime()) / 1000000000);
+			String TripleGun = "Triple Fire: " + Long.toString((this.TripleGunTimeOut - System.nanoTime()) / 1000000000);
 			// double TripleGun_width = fontLoader.computeStringWidth(TripleGun,
 			// gc.getFont());
 			double TripleGun_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
 			gc.fillText(TripleGun, 10, 20 + remainMissile_height + TripleGun_height);
 		} else if (missile > 0) {
-			String remainMissile = "Missile: " + Integer.toString(this.missile);
+			String remainMissile = "Power Attack: " + Integer.toString(this.missile);
 			// double remainMissile_width = fontLoader.computeStringWidth(remainMissile,
 			// gc.getFont());
 			double remainMissile_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
 			gc.fillText(remainMissile, 10, 10 + remainMissile_height);
 		} else if (gunMode == 1) {
-			String TripleGun = "Triple Gun: " + Long.toString((this.TripleGunTimeOut - System.nanoTime()) / 1000000000);
+			String TripleGun = "Triple Fire: " + Long.toString((this.TripleGunTimeOut - System.nanoTime()) / 1000000000);
 			// double TripleGun_width = fontLoader.computeStringWidth(TripleGun,
 			// gc.getFont());
 			double TripleGun_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
