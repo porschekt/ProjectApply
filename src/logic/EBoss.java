@@ -15,14 +15,14 @@ public class EBoss extends Enemy {
 
 	public EBoss(GameLogic gameLogic) {
 		super(1000, 0.2);
-		this.originalHp = 1000;
+		this.originalHp = 3000;
 		this.width = RenderableHolder.eBoss.getWidth();
 		this.height = RenderableHolder.eBoss.getHeight();
 		this.visible = true;
 		this.destroyed = false;
 		this.x = (SceneManager.SCENE_WIDTH - this.width) / 2.0;
 		this.y = -this.height;
-		this.collideDamage = 50;
+		this.collideDamage = 1000;
 		this.gameLogic = gameLogic;
 
 		GameLogic.isBossAlive = true;
