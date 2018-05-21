@@ -18,7 +18,7 @@ public class RenderableHolder {
 	// how it looks etc)
 	public static Image dragon1, eBig, eBoss, eEyeball, eBug, eSquid, eWing, bullet, backgroundMM, backgroundMM2,
 			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, missile, exploArr[], background,randomBox, backgroundGS, backgroundGO;
-	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic, missileLaunch;
+	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic, missileLaunch, gameWinnerMusic;
 	public static Font inGameFont, inGameFontSmall;
 
 	public static Image[] dragon;
@@ -76,6 +76,7 @@ public class RenderableHolder {
 		bgm = new AudioClip(ClassLoader.getSystemResource("song/GameScene.mp3").toExternalForm());
 		laser = new AudioClip(ClassLoader.getSystemResource("song/laser.wav").toExternalForm());
 		laser.setVolume(0.35);
+		gameWinnerMusic = new AudioClip(ClassLoader.getSystemResource("song/Winner.mp3").toExternalForm());
 		gameOverMusic = new AudioClip(ClassLoader.getSystemResource("song/GameOver.mp3").toExternalForm());
 		mainMenuMusic = new AudioClip(ClassLoader.getSystemResource("song/MainMenu.mp3").toExternalForm());
 		explosion = new AudioClip(ClassLoader.getSystemResource("song/Explosion.wav").toExternalForm());

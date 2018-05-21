@@ -2,6 +2,7 @@ package game;
 
 import drawing.GameOverScreen;
 import drawing.GameScreen;
+import drawing.GameWinnerScreen;
 import input.CharacterInput;
 import javafx.application.Platform;
 import logic.GameLogic;
@@ -15,6 +16,7 @@ public class GameMain {
 	private static BackgroundMusic gameBgm;
 	private static GameLogic gameLogic;
 	private static GameOverScreen gameOver;
+	private static GameWinnerScreen gameWinner;
 
 	public static void newGame() {
 		// TODO fill code
@@ -48,6 +50,12 @@ public class GameMain {
 		// TODO fill code
 		gameOver = new GameOverScreen();
 		SceneManager.gotoSceneOf(gameOver);
+	}
+	
+	private static void displayGameWinnerResult() {
+		// TODO fill code
+		gameWinner = new GameWinnerScreen();
+		SceneManager.gotoSceneOf(gameWinner);
 	}
 
 }
