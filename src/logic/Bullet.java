@@ -93,7 +93,7 @@ public class Bullet extends CollidableEntity {
 			this.visible = false;
 
 		} else if (type == 7) {
-			// do nothing
+			// do nothing wait for Explosion to make big area 250 collide damage
 		} else {
 			this.hp -= others.collideDamage;
 		}

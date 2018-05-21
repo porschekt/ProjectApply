@@ -147,7 +147,7 @@ public class GameLogic {
 		Random r = new Random();
 		this.maxEnemyCap = 5 + stageLevel;
 		// check score to spawn boss first
-		//if didnt check it will spaen a lot of boss lol
+		//if didn't check it will spawn a lot of boss lol
 		if (Score.score == 300 && !isBossAlive) {
 			eboss = new EBoss(this);
 			addNewObject(eboss);
