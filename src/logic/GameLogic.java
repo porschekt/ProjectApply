@@ -21,11 +21,13 @@ public class GameLogic {
 	private static final long LOOP_TIME = 1000000000 / FPS;
 
 	private int gameOverCountdown = 24;
+	private int gameWinCountdown = 24;
 
 	private int maxEnemyCap;
 	public static int currentEnemyNum;
 	public static boolean isBossAlive;
 	public static boolean isBigAlive;
+	public static boolean killedBoss;
 	private int stageLevel;
 
 	private long nextItemsSpawnTime;
@@ -37,6 +39,7 @@ public class GameLogic {
 	private EBig ebig;
 	private EBoss eboss;
 	private EBug ebug;
+	private Enemy enemy;
 
 	public GameLogic(GameScreen canvas) {
 		this.gameObjectContainer = new ArrayList<Entity>();
@@ -45,6 +48,8 @@ public class GameLogic {
 		stageLevel = 1;
 		GameLogic.isBossAlive = false;
 		GameLogic.isBigAlive = false;
+		killedBoss=false;
+		
 
 		RenderableHolder.getInstance().add(new Background());
 		RenderableHolder.getInstance().add(new Score());
@@ -132,8 +137,14 @@ public class GameLogic {
 		if (player.isDestroyed()) {
 			gameOverCountdown--;
 		}
+		if(killedBoss) {
+			gameWinCountdown--;
+		}
+		if (gameWinCountdown == 0) {
+			GameMain.winGame();
+		}
 		if (gameOverCountdown == 0) {
-			GameMain.stopGame();
+			GameMain.loseGame();
 		}
 
 	}
@@ -150,11 +161,11 @@ public class GameLogic {
 		this.maxEnemyCap = 5 + stageLevel;
 		// check score to spawn boss first
 		//if didn't check it will spawn a lot of boss
-		if (Score.score == 500 && !isBigAlive) {
+		if (Score.score == 200 && !isBigAlive) {
 			ebig = new EBig(this);
 			addNewObject(ebig);
 		}
-		if (Score.score == 300 && !isBossAlive) {
+		if (Score.score == 10 && !isBossAlive) {
 			eboss = new EBoss(this);
 			addNewObject(eboss);
 		}

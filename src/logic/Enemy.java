@@ -4,6 +4,7 @@ import sharedObject.RenderableHolder;
 import window.SceneManager;
 
 public abstract class Enemy extends CollidableEntity {
+
 	private static int zCounter = -200; // to generate different z for each Enemy to prevent flashing when 2 or more
 										// enemy are overlap.
 										// Enemy z is between -200 and -100 inclusive.
@@ -16,6 +17,7 @@ public abstract class Enemy extends CollidableEntity {
 		if (zCounter > -100) {
 			zCounter = -200;
 		}
+
 
 		GameLogic.currentEnemyNum++;
 
@@ -33,7 +35,6 @@ public abstract class Enemy extends CollidableEntity {
 			}
 			this.destroyed = true;
 			this.visible = false;
-
 		}
 		// System.out.println(this.getClass() + " is collided! by player " + this.hp);
 	}
@@ -50,6 +51,7 @@ public abstract class Enemy extends CollidableEntity {
 		if (e instanceof EBoss) {
 			Score.score += 30;
 			GameLogic.isBossAlive = false;
+			GameLogic.killedBoss = true;
 		}
 		if (e instanceof EBug) {
 			Score.score += 1;

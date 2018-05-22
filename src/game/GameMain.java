@@ -38,9 +38,18 @@ public class GameMain {
 
 	}
 
-	public static void stopGame() {
+	public static void loseGame() {
 		stopGameLogicAndAnimation();
 		Platform.runLater(GameMain::displayGameOverResult);
+		CharacterInput.clear();
+		RenderableHolder.getInstance().clear();
+
+	}
+	
+	
+	public static void winGame() {
+		stopGameLogicAndAnimation();
+		Platform.runLater(GameMain::displayGameWinnerResult);
 		CharacterInput.clear();
 		RenderableHolder.getInstance().clear();
 
@@ -51,6 +60,9 @@ public class GameMain {
 		gameOver = new GameOverScreen();
 		SceneManager.gotoSceneOf(gameOver);
 	}
+	
+	
+	
 	
 	private static void displayGameWinnerResult() {
 		// TODO fill code

@@ -14,8 +14,8 @@ public class EBoss extends Enemy {
 	private int bulletDelayTick = 0;
 
 	public EBoss(GameLogic gameLogic) {
-		super(2500, 0.2);
-		this.originalHp = 3000;
+		super(2500, 0.1);
+		this.originalHp = 2500;
 		this.width = RenderableHolder.eBoss.getWidth();
 		this.height = RenderableHolder.eBoss.getHeight();
 		this.visible = true;
@@ -48,6 +48,7 @@ public class EBoss extends Enemy {
 			RenderableHolder.laser.play();
 		}
 		bulletDelayTick++;
+		
 	}
 
 	@Override
@@ -56,6 +57,7 @@ public class EBoss extends Enemy {
 		gc.drawImage(RenderableHolder.eBoss, x, y);
 		drawHpBar(gc);
 	}
+	
 
 	private void drawHpBar(GraphicsContext gc) {
 		double percentHp = this.hp / this.originalHp;
