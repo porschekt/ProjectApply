@@ -81,7 +81,7 @@ public class RenderableHolder {
 		mainMenuMusic = new AudioClip(ClassLoader.getSystemResource("song/MainMenu.mp3").toExternalForm());
 		explosion = new AudioClip(ClassLoader.getSystemResource("song/Explosion.wav").toExternalForm());
 		explosion2 = new AudioClip(ClassLoader.getSystemResource("song/Explosion2.wav").toExternalForm());
-		missileLaunch = new AudioClip(ClassLoader.getSystemResource("song/MissileLaunch.wav").toExternalForm());
+		missileLaunch = new AudioClip(ClassLoader.getSystemResource("song/PowerAttack.mp3").toExternalForm());
 
 		explosions = new AudioClip[] { explosion, explosion2 };
 
