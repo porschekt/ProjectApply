@@ -57,8 +57,8 @@ public class GameMain {
 
 	private static void displayGameOverResult() {
 		// TODO fill code
-		gameWinner = new GameWinnerScreen();
-		SceneManager.gotoSceneOf(gameWinner);
+		gameOver = new GameOverScreen();
+		SceneManager.gotoSceneOf(gameOver);
 	}
 	
 	

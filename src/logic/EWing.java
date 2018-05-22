@@ -10,7 +10,7 @@ public class EWing extends Enemy {
 	private GameLogic gameLogic;
 
 	public EWing(GameLogic gameLogic, double x) {
-		super(150, 0.5);
+		super(600, 0.5);
 		// TODO Auto-generated constructor stub
 		this.width = RenderableHolder.eWing.getWidth();
 		this.height = RenderableHolder.eWing.getHeight();

@@ -30,7 +30,7 @@ public class Player extends CollidableEntity implements IRenderable {
 
 	public Player(GameLogic gameLogic) {
 		// TODO Auto-generated constructor stub
-		super(250, 30);
+		super(4000, 30);
 		this.originalHp = this.hp;
 		this.z = 0;
 

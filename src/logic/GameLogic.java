@@ -161,16 +161,16 @@ public class GameLogic {
 		this.maxEnemyCap = 5 + stageLevel;
 		// check score to spawn boss first
 		//if didn't check it will spawn a lot of boss
-		if (Score.score == 200 && !isBigAlive) {
+		if (Score.score >= 20 && !isBigAlive) {
 			ebig = new EBig(this);
 			addNewObject(ebig);
 		}
-		if (Score.score == 500 && !isBossAlive) {
+		if (Score.score >= 1000 && !isBossAlive) {
 			eboss = new EBoss(this);
 			addNewObject(eboss);
 		}
 		
-		if (Score.score >= 100 * stageLevel ) {
+		if (Score.score >= 250 * stageLevel ) {
 			stageLevel++;
 		}
 

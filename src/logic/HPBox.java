@@ -10,7 +10,7 @@ public class HPBox extends Items {
 
 	public HPBox(double x) {
 		super(ThreadLocalRandom.current().nextDouble(1, 5));
-		this.HPStorage = ThreadLocalRandom.current().nextDouble(50, 500);
+		this.HPStorage = ThreadLocalRandom.current().nextDouble(500, 1000);
 		this.width = RenderableHolder.randomBox.getWidth();
 		this.height = RenderableHolder.randomBox.getHeight();
 		this.visible = true;

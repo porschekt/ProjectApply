@@ -69,7 +69,7 @@ public class RenderableHolder {
 
 		background = new Image(ClassLoader.getSystemResource("background/bg2.png").toString());
 		backgroundMM = new Image(ClassLoader.getSystemResource("background/DragonCave.jpg").toString());
-		backgroundMM2 = new Image(ClassLoader.getSystemResource("background/MC.jpg").toString());
+		backgroundMM2 = new Image(ClassLoader.getSystemResource("background/Cave.jpg").toString());
 		
 		randomBox= new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 
