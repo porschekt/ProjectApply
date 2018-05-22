@@ -36,12 +36,12 @@ public class Bullet extends CollidableEntity {
 			this.height = RenderableHolder.bullet.getHeight();
 			this.width = RenderableHolder.bullet.getWidth();
 			bulletSprite = RenderableHolder.bullet;
-			this.collideDamage = 10;
+			this.collideDamage = 30;
 		} else if (type == 1) {
 			this.height = RenderableHolder.bossBullet.getHeight();
 			this.width = RenderableHolder.bossBullet.getWidth();
 			bulletSprite = RenderableHolder.bossBullet;
-			this.collideDamage = 20;
+			this.collideDamage = 50;
 		} else if (type == 2) {
 			this.height = RenderableHolder.roundBulletB.getHeight();
 			this.width = RenderableHolder.roundBulletB.getWidth();
@@ -119,6 +119,9 @@ public class Bullet extends CollidableEntity {
 			e.playSfx();
 			RenderableHolder.getInstance().add(e);
 			exploding = false;
+		}
+		if (type == 7) {
+				y += speedY;
 		}
 		if (type != 7) {
 			x -= speedX;

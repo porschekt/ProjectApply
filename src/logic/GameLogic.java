@@ -165,12 +165,12 @@ public class GameLogic {
 			ebig = new EBig(this);
 			addNewObject(ebig);
 		}
-		if (Score.score == 10 && !isBossAlive) {
+		if (Score.score == 500 && !isBossAlive) {
 			eboss = new EBoss(this);
 			addNewObject(eboss);
 		}
 		
-		if (Score.score >= 100 * stageLevel * 1.5) {
+		if (Score.score >= 100 * stageLevel ) {
 			stageLevel++;
 		}
 
