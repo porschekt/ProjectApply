@@ -161,7 +161,7 @@ public class GameLogic {
 		this.maxEnemyCap = 5 + stageLevel;
 		// check score to spawn boss first
 		//if didn't check it will spawn a lot of boss
-		if (Score.score >= 20 && !isBigAlive) {
+		if (Score.score >= 500 && !isBigAlive) {
 			ebig = new EBig(this);
 			addNewObject(ebig);
 		}
@@ -181,14 +181,14 @@ public class GameLogic {
 			int chance = r.nextInt(100) - 1000 / (Score.score + 1); // difficulty factor , +1 to prevent zero when start
 																	// new game
 			// System.out.println(" chance " + chance);
-			if (chance < 40) {
+			if (chance < 50) {
 				ebug = new EBug(ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eBug.getWidth()));
 				addNewObject(ebug);
-			} else if (chance < 70) {
+			} else if (chance < 80) {
 				addNewObject(new ESquid(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eEyeball.getWidth())));
-			} else if (chance < 85) {
+			} else if (chance < 95) {
 				addNewObject(new EEyeball(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eEyeball.getWidth())));
 			} else  {

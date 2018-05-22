@@ -74,7 +74,7 @@ public class RenderableHolder {
 		randomBox= new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 
 		bgm = new AudioClip(ClassLoader.getSystemResource("song/GameScene.mp3").toExternalForm());
-		laser = new AudioClip(ClassLoader.getSystemResource("song/laser.wav").toExternalForm());
+		laser = new AudioClip(ClassLoader.getSystemResource("song/Fire_Ball.mp3").toExternalForm());
 		laser.setVolume(0.35);
 		gameWinnerMusic = new AudioClip(ClassLoader.getSystemResource("song/Winner.mp3").toExternalForm());
 		gameOverMusic = new AudioClip(ClassLoader.getSystemResource("song/GameOver.mp3").toExternalForm());
