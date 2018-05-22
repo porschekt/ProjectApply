@@ -63,9 +63,9 @@ public class Bullet extends CollidableEntity {
 			bulletSprite = RenderableHolder.roundBulletP;
 			this.collideDamage = 10;
 		} else if (type == 6) {
-			this.height = RenderableHolder.missile.getHeight();
-			this.width = RenderableHolder.missile.getWidth();
-			bulletSprite = RenderableHolder.missile;
+			this.height = RenderableHolder.powerAttack.getHeight();
+			this.width = RenderableHolder.powerAttack.getWidth();
+			bulletSprite = RenderableHolder.powerAttack;
 			this.collideDamage = 10;
 		}
 		if (side == 1) {

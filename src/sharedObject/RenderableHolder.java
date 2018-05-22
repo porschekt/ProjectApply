@@ -16,9 +16,9 @@ public class RenderableHolder {
 	private Comparator<IRenderable> comparator;
 	// various image plz check the image first before using (like to find its size /
 	// how it looks etc)
-	public static Image dragon1, eBig, eBoss, eEyeball, eBug, eSquid, eWing, bullet, backgroundMM, backgroundMM2,
-			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, missile, exploArr[], background,randomBox, backgroundGS, backgroundGO;
-	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic, missileLaunch, gameWinnerMusic;
+	public static Image dragon1, eSemiBoss, eBoss, eGhost, eSpiriteFire, eMachine, eTree, bullet, backgroundMM, backgroundMM2,
+			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, powerAttack, exploArr[], background,randomBox, backgroundGS, backgroundGO;
+	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic,  powerAttackLaunch, gameWinnerMusic;
 	public static Font inGameFont, inGameFontSmall;
 
 	public static Image[] dragon;
@@ -47,12 +47,12 @@ public class RenderableHolder {
 
 		dragon = new Image[] { dragon1 }; // if add more dragon
 
-		eBig = new Image(ClassLoader.getSystemResource("enemy/eBig.gif").toString());
+		eSemiBoss = new Image(ClassLoader.getSystemResource("enemy/eSemiBoss.gif").toString());
 		eBoss = new Image(ClassLoader.getSystemResource("enemy/eBoss.gif").toString());
-		eEyeball = new Image(ClassLoader.getSystemResource("enemy/eEyeball.gif").toString());
-		eBug = new Image(ClassLoader.getSystemResource("enemy/eBug.gif").toString());
-		eSquid = new Image(ClassLoader.getSystemResource("enemy/eSquid.gif").toString());
-		eWing = new Image(ClassLoader.getSystemResource("enemy/eWing.gif").toString());
+		eGhost = new Image(ClassLoader.getSystemResource("enemy/eGhost.gif").toString());
+		eSpiriteFire = new Image(ClassLoader.getSystemResource("enemy/eSpiriteFire.gif").toString());
+		eMachine = new Image(ClassLoader.getSystemResource("enemy/eMachine.gif").toString());
+		eTree = new Image(ClassLoader.getSystemResource("enemy/eTree.gif").toString());
 
 		exploArr = new Image[12];
 		for (int i = 0; i < 12; i++) {
@@ -60,7 +60,7 @@ public class RenderableHolder {
 		}
 
 		bullet = new Image(ClassLoader.getSystemResource("bullet/bullet.png").toString());
-		missile = new Image(ClassLoader.getSystemResource("bullet/missile.gif").toString());
+		powerAttack = new Image(ClassLoader.getSystemResource("bullet/fireball.gif").toString());
 		bossBullet = new Image(ClassLoader.getSystemResource("bullet/bossBullet.gif").toString());
 		roundBulletB = new Image(ClassLoader.getSystemResource("bullet/roundBulletB.png").toString());
 		roundBulletY = new Image(ClassLoader.getSystemResource("bullet/roundBulletY.png").toString());
@@ -81,12 +81,12 @@ public class RenderableHolder {
 		mainMenuMusic = new AudioClip(ClassLoader.getSystemResource("song/MainMenu.mp3").toExternalForm());
 		explosion = new AudioClip(ClassLoader.getSystemResource("song/Explosion.wav").toExternalForm());
 		explosion2 = new AudioClip(ClassLoader.getSystemResource("song/Explosion2.wav").toExternalForm());
-		missileLaunch = new AudioClip(ClassLoader.getSystemResource("song/PowerAttack.mp3").toExternalForm());
+		powerAttackLaunch = new AudioClip(ClassLoader.getSystemResource("song/PowerAttack.mp3").toExternalForm());
 
 		explosions = new AudioClip[] { explosion, explosion2 };
 
-		inGameFont = Font.loadFont(ClassLoader.getSystemResource("font/Digital_tech.otf").toString(), 40);
-		inGameFontSmall = Font.loadFont(ClassLoader.getSystemResource("font/Digital_tech.otf").toString(), 20);
+		inGameFont = Font.loadFont(ClassLoader.getSystemResource("font/Winner.otf").toString(), 40);
+		inGameFontSmall = Font.loadFont(ClassLoader.getSystemResource("font/Winner.otf").toString(), 20);
 	}
 
 	public void add(IRenderable entity) {

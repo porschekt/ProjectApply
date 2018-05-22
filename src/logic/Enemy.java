@@ -53,19 +53,19 @@ public abstract class Enemy extends CollidableEntity {
 			GameLogic.isBossAlive = false;
 			GameLogic.killedBoss = true;
 		}
-		if (e instanceof EBug) {
+		if (e instanceof ESpiriteFire) {
 			Score.score += 1;
 		}
-		if (e instanceof EEyeball) {
+		if (e instanceof EGost) {
 			Score.score += 5;
 		}
-		if (e instanceof ESquid) {
+		if (e instanceof EMachine) {
 			Score.score += 3;
 		}
-		if (e instanceof EWing) {
+		if (e instanceof ETree) {
 			Score.score += 10;
 		}
-		if (e instanceof EBig) {
+		if (e instanceof ESemiBoss) {
 			Score.score += 15;
 		}
 	}

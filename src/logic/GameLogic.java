@@ -36,9 +36,9 @@ public class GameLogic {
 	private boolean isGameRunning;
 
 	private Player player;
-	private EBig ebig;
+	private ESemiBoss ebig;
 	private EBoss eboss;
-	private EBug ebug;
+	private ESpiriteFire ebug;
 	private Enemy enemy;
 
 	public GameLogic(GameScreen canvas) {
@@ -162,7 +162,7 @@ public class GameLogic {
 		// check score to spawn boss first
 		//if didn't check it will spawn a lot of boss
 		if (Score.score >= 500 && !isBigAlive) {
-			ebig = new EBig(this);
+			ebig = new ESemiBoss(this);
 			addNewObject(ebig);
 		}
 		if (Score.score >= 1000 && !isBossAlive) {
@@ -182,18 +182,18 @@ public class GameLogic {
 																	// new game
 			// System.out.println(" chance " + chance);
 			if (chance < 50) {
-				ebug = new EBug(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eBug.getWidth()));
+				ebug = new ESpiriteFire(ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eSpiriteFire.getWidth()));
 				addNewObject(ebug);
 			} else if (chance < 80) {
-				addNewObject(new ESquid(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eEyeball.getWidth())));
+				addNewObject(new EMachine(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eGhost.getWidth())));
 			} else if (chance < 95) {
-				addNewObject(new EEyeball(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eEyeball.getWidth())));
+				addNewObject(new EGost(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eGhost.getWidth())));
 			} else  {
-				addNewObject(new EWing(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eEyeball.getWidth())));
+				addNewObject(new ETree(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eGhost.getWidth())));
 			}
 			
 		}
@@ -214,7 +214,7 @@ public class GameLogic {
 				addNewObject(new TripleGunBox(ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.randomBox.getWidth())));
 			} else if (gachaPull <= 55) {
-				addNewObject(new MissileBox(ThreadLocalRandom.current()
+				addNewObject(new PowerAttackBox(ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.randomBox.getWidth())));
 			} else {
 				addNewObject(new HPBox(ThreadLocalRandom.current()

@@ -146,7 +146,7 @@ public class Player extends CollidableEntity implements IRenderable {
 
 			if (this.missile > 0) {
 				gameLogic.addPendingBullet(new Bullet(x, y, 0, 30, 1, 6, this));
-				RenderableHolder.missileLaunch.play();
+				RenderableHolder. powerAttackLaunch.play();
 				missile--;
 
 			}
@@ -194,7 +194,7 @@ public class Player extends CollidableEntity implements IRenderable {
 			this.gunMode = 1;
 			this.TripleGunTimeOut = System.nanoTime() + 10000000000l; // 10 seconds timeout
 		}
-		if (others instanceof MissileBox) {
+		if (others instanceof PowerAttackBox) {
 			missile++;
 		}
 		// to be further discussed (sound effect etc)
