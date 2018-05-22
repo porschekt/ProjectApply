@@ -60,7 +60,7 @@ public class RenderableHolder {
 		}
 
 		bullet = new Image(ClassLoader.getSystemResource("bullet/bullet.png").toString());
-		missile = new Image(ClassLoader.getSystemResource("bullet/missile.png").toString());
+		missile = new Image(ClassLoader.getSystemResource("bullet/missile.gif").toString());
 		bossBullet = new Image(ClassLoader.getSystemResource("bullet/bossBullet.gif").toString());
 		roundBulletB = new Image(ClassLoader.getSystemResource("bullet/roundBulletB.png").toString());
 		roundBulletY = new Image(ClassLoader.getSystemResource("bullet/roundBulletY.png").toString());
