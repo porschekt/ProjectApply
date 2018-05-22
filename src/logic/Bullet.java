@@ -126,6 +126,9 @@ public class Bullet extends CollidableEntity {
 		if (type != 7) {
 			x -= speedX;
 			if (side == 1) {
+				if(type == 6) {
+					y-=speedY/3;
+				}else
 				y -= speedY;
 
 			} else {
