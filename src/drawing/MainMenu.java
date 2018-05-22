@@ -28,7 +28,6 @@ public class MainMenu extends Canvas {
 		
 		GraphicsContext gc = this.getGraphicsContext2D();
 		gc.drawImage(RenderableHolder.backgroundMM, 0, 0, SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
-//		gc.drawImage(RenderableHolder.backgroundMM2, SceneManager.SCENE_WIDTH/2-100, SceneManager.SCENE_HEIGHT/2-170 , SceneManager.SCENE_WIDTH/3, SceneManager.SCENE_HEIGHT/3);
 		gc.setTextAlign(TextAlignment.CENTER);
 		gc.setFill(Color.DARKRED);
 		gc.setFont(TITLE_FONT);
