@@ -25,7 +25,6 @@ public class GameOverScreen extends Canvas {
 
 	public GameOverScreen() {
 		super(SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
-
 		GraphicsContext gc = this.getGraphicsContext2D();
 		music.play();
 		gc.setFill(Color.BLACK);
