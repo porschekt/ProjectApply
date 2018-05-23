@@ -16,9 +16,9 @@ public class RenderableHolder {//the picture class maker and we use this to make
 	private Comparator<IRenderable> comparator;
 	// various image plz check the image first before using (like to find its size /
 	// how it looks etc)
-	public static Image dragon, eSemiBoss, eBoss, eGhost, eSpiriteFire, eMachine, eTree, bullet, backgroundMM, backgroundW,
-			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, powerAttack, exploArr[], background, randomBox;
-	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic,  powerAttackLaunch, gameWinnerMusic;
+	public static Image dragon, eSemiBoss, eBoss, eGhost, eSpiriteFire, eMachine, eTree, bullet, background, backgroundMM, backgroundW,
+			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, powerAttack, exploArr[], randomBox;
+	public static AudioClip bgm, fireBall, explosion, explosion2, gameOverMusic, mainMenuMusic,  powerAttackLaunch, gameWinnerMusic;
 	public static Font inGameFont, inGameFontSmall;
 
 	public static AudioClip[] explosions;
@@ -73,8 +73,8 @@ public class RenderableHolder {//the picture class maker and we use this to make
 		randomBox= new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 		//item box picture
 		bgm = new AudioClip(ClassLoader.getSystemResource("song/GameScene.mp3").toExternalForm());
-		laser = new AudioClip(ClassLoader.getSystemResource("song/Fire_Ball.mp3").toExternalForm());
-		laser.setVolume(0.35);
+		fireBall = new AudioClip(ClassLoader.getSystemResource("song/Fire_Ball.mp3").toExternalForm());
+		fireBall.setVolume(0.35);
 		gameWinnerMusic = new AudioClip(ClassLoader.getSystemResource("song/Winner.mp3").toExternalForm());
 		gameOverMusic = new AudioClip(ClassLoader.getSystemResource("song/GameOver.mp3").toExternalForm());
 		mainMenuMusic = new AudioClip(ClassLoader.getSystemResource("song/MainMenu.mp3").toExternalForm());

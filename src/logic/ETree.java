@@ -51,7 +51,7 @@ public class ETree extends Enemy {
 			gameLogic.addPendingBullet(new Bullet(x, y, 5, 10, -1, 3, this));
 			gameLogic.addPendingBullet(new Bullet(x, y, -5, 10, -1, 3, this));
 			gameLogic.addPendingBullet(new Bullet(x, y, 0, 10, -1, 3, this));
-			RenderableHolder.laser.play();
+			RenderableHolder.fireBall.play();
 		}
 		bulletDelayTick++;
 	}

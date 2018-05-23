@@ -46,7 +46,7 @@ public class ESemiBoss extends Enemy {
 			gameLogic.addPendingBullet(new Bullet(x + 50, y - 20, -8, 15, -1, 4, this));
 			gameLogic.addPendingBullet(new Bullet(x - 15, y, 4, 15, -1, 4, this));
 			gameLogic.addPendingBullet(new Bullet(x + 15, y, -4, 15, -1, 4, this));
-			RenderableHolder.laser.play();
+			RenderableHolder.fireBall.play();
 		}
 		bulletDelayTick++;
 

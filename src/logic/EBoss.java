@@ -45,7 +45,7 @@ public class EBoss extends Enemy {
 		}
 		if (bulletDelayTick % 30 == 0) {
 			gameLogic.addPendingBullet(new Bullet(x, y, 0, 20, -1, 1, this));
-			RenderableHolder.laser.play();
+			RenderableHolder.fireBall.play();
 		}
 		bulletDelayTick++;
 		

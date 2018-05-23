@@ -49,7 +49,7 @@ public class EGhost extends Enemy {
 		}
 		if (bulletDelayTick % 20 == 0) {
 			gameLogic.addPendingBullet(new Bullet(x, y, 0, 10, -1, 2, this));
-			RenderableHolder.laser.play();
+			RenderableHolder.fireBall.play();
 		}
 		bulletDelayTick++;
 	}

@@ -50,7 +50,7 @@ public class EMachine extends Enemy {
 		}
 		if (bulletDelayTick % 50 == 0) {
 			gameLogic.addPendingBullet(new Bullet(x, y, 0, 10, -1, 5, this));
-			RenderableHolder.laser.play();
+			RenderableHolder.fireBall.play();
 		}
 		bulletDelayTick++;
 	}

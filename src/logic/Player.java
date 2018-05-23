@@ -158,14 +158,14 @@ public class Player extends CollidableEntity implements IRenderable {
 				// System.out.println("SHOOOOT");
 				if (gunMode == 0) {
 					gameLogic.addPendingBullet(new Bullet(x, y, 0, 20, 1, 0, this));
-					RenderableHolder.laser.play();
+					RenderableHolder.fireBall.play();
 				} else if (gunMode == 1) {
 					gameLogic.addPendingBullet(new Bullet(x, y, 0, 20, 1, 0, this));
-					RenderableHolder.laser.play();
+					RenderableHolder.fireBall.play();
 					gameLogic.addPendingBullet(new Bullet(x - 20, y, 0, 20, 1, 0, this));
-					RenderableHolder.laser.play();
+					RenderableHolder.fireBall.play();
 					gameLogic.addPendingBullet(new Bullet(x + 20, y, 0, 20, 1, 0, this));
-					RenderableHolder.laser.play();
+					RenderableHolder.fireBall.play();
 				}
 				prevbulletTick = bulletDelayTick;
 			}
