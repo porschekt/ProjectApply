@@ -66,9 +66,9 @@ public class RenderableHolder {//the picture class maker and we use this to make
 		roundBulletR = new Image(ClassLoader.getSystemResource("bullet/roundBulletR.png").toString());
 		roundBulletP = new Image(ClassLoader.getSystemResource("bullet/roundBulletP.png").toString());
 		//bullet picture
-		background = new Image(ClassLoader.getSystemResource("background/bg2.png").toString());
-		backgroundMM = new Image(ClassLoader.getSystemResource("background/DragonCave.jpg").toString());
-		backgroundW = new Image(ClassLoader.getSystemResource("background/Cave.jpg").toString());
+		background = new Image(ClassLoader.getSystemResource("background/BgGameScreen.png").toString());
+		backgroundMM = new Image(ClassLoader.getSystemResource("background/BgMainMenu.jpg").toString());
+		backgroundW = new Image(ClassLoader.getSystemResource("background/BgGameWinner.jpg").toString());
 		//background of 3 screen
 		randomBox= new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 		//item box picture

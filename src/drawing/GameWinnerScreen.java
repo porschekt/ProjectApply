@@ -27,7 +27,6 @@ public class GameWinnerScreen extends Canvas {
 		GraphicsContext gc = this.getGraphicsContext2D();
 		music.play();
 		gc.drawImage(RenderableHolder.backgroundW, 0, 0, SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
-//		gc.fillRect(0, 0, SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
 		gc.setTextAlign(TextAlignment.CENTER);
 		gc.setFill(Color.YELLOW);
 		gc.setFont(TITLE_FONT);
