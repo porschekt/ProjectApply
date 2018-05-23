@@ -26,7 +26,7 @@ public class GameLogic {
 	private int maxEnemyCap;
 	public static int currentEnemyNum;
 	public static boolean isBossAlive;
-	public static boolean isBigAlive;
+	public static boolean isSemiAlive;
 	public static boolean killedBoss;
 	private int stageLevel;
 
@@ -47,7 +47,7 @@ public class GameLogic {
 		GameLogic.currentEnemyNum = 0;
 		stageLevel = 1;
 		GameLogic.isBossAlive = false;
-		GameLogic.isBigAlive = false;
+		GameLogic.isSemiAlive = false;
 		killedBoss=false;
 		
 
@@ -161,7 +161,7 @@ public class GameLogic {
 		this.maxEnemyCap = 5 + stageLevel;
 		// check score to spawn boss first
 		//if didn't check it will spawn a lot of boss
-		if (Score.score >= 500 && !isBigAlive) {
+		if (Score.score >= 500 && !isSemiAlive) {
 			ebig = new ESemiBoss(this);
 			addNewObject(ebig);
 		}

@@ -26,7 +26,7 @@ public class ESemiBoss extends Enemy {
 		this.collideDamage = 1000;
 		this.gameLogic = gameLogic;
 		
-		GameLogic.isBigAlive = true;
+		GameLogic.isSemiAlive = true;
 	}
 
 	@Override
