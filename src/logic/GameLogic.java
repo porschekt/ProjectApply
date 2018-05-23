@@ -36,10 +36,9 @@ public class GameLogic {
 	private boolean isGameRunning;
 
 	private Player player;
-	private ESemiBoss ebig;
+	private ESemiBoss esemi;
 	private EBoss eboss;
-	private ESpiriteFire ebug;
-	private Enemy enemy;
+	private ESpiriteFire espirit;
 
 	public GameLogic(GameScreen canvas) {
 		this.gameObjectContainer = new ArrayList<Entity>();
@@ -162,8 +161,8 @@ public class GameLogic {
 		// check score to spawn boss first
 		//if didn't check it will spawn a lot of boss
 		if (Score.score >= 500 && !isSemiAlive) {
-			ebig = new ESemiBoss(this);
-			addNewObject(ebig);
+			esemi = new ESemiBoss(this);
+			addNewObject(esemi);
 		}
 		if (Score.score >= 1000 && !isBossAlive) {
 			eboss = new EBoss(this);
@@ -182,9 +181,9 @@ public class GameLogic {
 																	// new game
 			// System.out.println(" chance " + chance);
 			if (chance < 50) {
-				ebug = new ESpiriteFire(ThreadLocalRandom.current()
+				espirit = new ESpiriteFire(ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eSpiriteFire.getWidth()));
-				addNewObject(ebug);
+				addNewObject(espirit);
 			} else if (chance < 80) {
 				addNewObject(new EMachine(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eGhost.getWidth())));
