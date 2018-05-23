@@ -15,7 +15,7 @@ public class ESemiBoss extends Enemy {
 
 	public ESemiBoss(GameLogic gameLogic) {
 		super(2000, 0.1);
-		this.originalHp = 1000;
+		this.originalHp = 2000;
 		this.width = RenderableHolder.eSemiBoss.getWidth();
 		this.height = RenderableHolder.eSemiBoss.getHeight();
 		yOffset = 0;

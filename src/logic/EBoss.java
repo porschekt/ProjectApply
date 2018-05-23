@@ -15,7 +15,7 @@ public class EBoss extends Enemy {
 
 	public EBoss(GameLogic gameLogic) {
 		super(4000, 0.1);
-		this.originalHp = 2500;
+		this.originalHp = 4000;
 		this.width = RenderableHolder.eBoss.getWidth();
 		this.height = RenderableHolder.eBoss.getHeight();
 		this.visible = true;

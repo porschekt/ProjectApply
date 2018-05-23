@@ -17,7 +17,7 @@ public class RenderableHolder {//the picture class maker and we use this to make
 	// various image plz check the image first before using (like to find its size /
 	// how it looks etc)
 	public static Image dragon, eSemiBoss, eBoss, eGhost, eSpiriteFire, eMachine, eTree, bullet, backgroundMM, backgroundMM2,
-			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, powerAttack, exploArr[], background,randomBox, backgroundGS, backgroundGO;
+			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, powerAttack, exploArr[], background, randomBox;
 	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic,  powerAttackLaunch, gameWinnerMusic;
 	public static Font inGameFont, inGameFontSmall;
 
