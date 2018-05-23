@@ -87,29 +87,21 @@ public class Player extends CollidableEntity implements IRenderable {
 		gc.setFill(Color.GREENYELLOW);
 		FontLoader fontLoader = Toolkit.getToolkit().getFontLoader();
 		if (powerAttack > 0 && fireMode == 1) {
-			String remainMissile = "Power Attack: " + Integer.toString(this.powerAttack);
-			// double remainMissile_width = fontLoader.computeStringWidth(remainMissile,
-			// gc.getFont());
-			double remainMissile_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
-			gc.fillText(remainMissile, 10, 10 + remainMissile_height);
+			String remainPowerAttack = "Power Attack: " + Integer.toString(this.powerAttack);
+			double remainPowerAttack_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
+			gc.fillText(remainPowerAttack, 10, 10 + remainPowerAttack_height);
 
-			String TripleGun = "Triple Fire: " + Long.toString((this.TripleFireTimeOut - System.nanoTime()) / 1000000000);
-			// double TripleGun_width = fontLoader.computeStringWidth(TripleGun,
-			// gc.getFont());
-			double TripleGun_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
-			gc.fillText(TripleGun, 10, 20 + remainMissile_height + TripleGun_height);
+			String TripleFire = "Triple Fire: " + Long.toString((this.TripleFireTimeOut - System.nanoTime()) / 1000000000);
+			double TripleFire_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
+			gc.fillText(TripleFire, 10, 20 + remainPowerAttack_height + TripleFire_height);
 		} else if (powerAttack > 0) {
-			String remainMissile = "Power Attack: " + Integer.toString(this.powerAttack);
-			// double remainMissile_width = fontLoader.computeStringWidth(remainMissile,
-			// gc.getFont());
-			double remainMissile_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
-			gc.fillText(remainMissile, 10, 10 + remainMissile_height);
+			String remainPowerAttack = "Power Attack: " + Integer.toString(this.powerAttack);
+			double remainPowerAttack_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
+			gc.fillText(remainPowerAttack, 10, 10 + remainPowerAttack_height);
 		} else if (fireMode == 1) {
-			String TripleGun = "Triple Fire: " + Long.toString((this.TripleFireTimeOut - System.nanoTime()) / 1000000000);
-			// double TripleGun_width = fontLoader.computeStringWidth(TripleGun,
-			// gc.getFont());
-			double TripleGun_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
-			gc.fillText(TripleGun, 10, 10 + TripleGun_height);
+			String TripleFire = "Triple Fire: " + Long.toString((this.TripleFireTimeOut - System.nanoTime()) / 1000000000);
+			double TripleFire_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall).getLineHeight();
+			gc.fillText(TripleFire, 10, 10 + TripleFire_height);
 		}
 	}
 
