@@ -16,7 +16,7 @@ public class RenderableHolder {//the picture class maker and we use this to make
 	private Comparator<IRenderable> comparator;
 	// various image plz check the image first before using (like to find its size /
 	// how it looks etc)
-	public static Image dragon, eSemiBoss, eBoss, eGhost, eSpiriteFire, eMachine, eTree, bullet, backgroundMM, backgroundMM2,
+	public static Image dragon, eSemiBoss, eBoss, eGhost, eSpiriteFire, eMachine, eTree, bullet, backgroundMM, backgroundW,
 			bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, powerAttack, exploArr[], background, randomBox;
 	public static AudioClip bgm, laser, explosion, explosion2, gameOverMusic, mainMenuMusic,  powerAttackLaunch, gameWinnerMusic;
 	public static Font inGameFont, inGameFontSmall;
@@ -68,7 +68,7 @@ public class RenderableHolder {//the picture class maker and we use this to make
 		//bullet picture
 		background = new Image(ClassLoader.getSystemResource("background/bg2.png").toString());
 		backgroundMM = new Image(ClassLoader.getSystemResource("background/DragonCave.jpg").toString());
-		backgroundMM2 = new Image(ClassLoader.getSystemResource("background/Cave.jpg").toString());
+		backgroundW = new Image(ClassLoader.getSystemResource("background/Cave.jpg").toString());
 		//background of 3 screen
 		randomBox= new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 		//item box picture
