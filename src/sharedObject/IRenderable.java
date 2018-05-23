@@ -2,7 +2,7 @@ package sharedObject;
 
 import javafx.scene.canvas.GraphicsContext;
 
-public interface IRenderable {
+public interface IRenderable {//Interface part that make some function
 	public int getZ();
 
 	public void draw(GraphicsContext gc);

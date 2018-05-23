@@ -19,7 +19,7 @@ public class Explosion implements IRenderable {
 	public Explosion(double posx, double posy, double width, double height, int originalZ) {
 		// TODO Auto-generated constructor stub
 		explosion = RenderableHolder.exploArr;
-		this.x = posx;
+		this.x = posx;//position
 		this.y = posy;
 		this.width = width;
 		this.height = height;

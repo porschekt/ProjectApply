@@ -7,7 +7,7 @@ public abstract class Entity implements IRenderable {
 	protected int z;
 	protected boolean visible, destroyed;
 
-	protected Entity() {
+	protected Entity() {//make all class that can collide like bullet enermy player
 		visible = true;
 		destroyed = false;
 		this.hp = 100;
