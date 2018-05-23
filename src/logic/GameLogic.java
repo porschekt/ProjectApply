@@ -211,7 +211,7 @@ public class GameLogic {
 			double gachaPull = ThreadLocalRandom.current().nextDouble(100);
 			// System.out.println("\t\tGacha: " + gachaPull);
 			if (gachaPull <= 32.5) {
-				addNewObject(new TripleGunBox(ThreadLocalRandom.current()
+				addNewObject(new TripleFireBox(ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.randomBox.getWidth())));
 			} else if (gachaPull <= 55) {
 				addNewObject(new PowerAttackBox(ThreadLocalRandom.current()

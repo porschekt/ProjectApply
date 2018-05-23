@@ -5,9 +5,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import javafx.scene.canvas.GraphicsContext;
 import sharedObject.RenderableHolder;
 
-public class TripleGunBox extends Items {
+public class TripleFireBox extends Items {
 
-	public TripleGunBox(double x) {
+	public TripleFireBox(double x) {
 		// TODO Auto-generated constructor stub
 		super(ThreadLocalRandom.current().nextDouble(1, 5));
 		this.width = RenderableHolder.randomBox.getWidth();
