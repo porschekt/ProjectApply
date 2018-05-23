@@ -5,11 +5,11 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import sharedObject.RenderableHolder;
 
-public class EGost extends Enemy {
+public class EGhost extends Enemy {
 	private int bulletDelayTick = 0;
 	private GameLogic gameLogic;
 
-	public EGost(GameLogic gameLogic, double x) {
+	public EGhost(GameLogic gameLogic, double x) {
 		super(120, 1);
 		// TODO Auto-generated constructor stub
 		this.width = RenderableHolder.eGhost.getWidth();

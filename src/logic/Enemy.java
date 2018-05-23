@@ -56,7 +56,7 @@ public abstract class Enemy extends CollidableEntity {
 		if (e instanceof ESpiriteFire) {
 			Score.score += 1;
 		}
-		if (e instanceof EGost) {
+		if (e instanceof EGhost) {
 			Score.score += 5;
 		}
 		if (e instanceof EMachine) {

@@ -189,7 +189,7 @@ public class GameLogic {
 				addNewObject(new EMachine(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eGhost.getWidth())));
 			} else if (chance < 95) {
-				addNewObject(new EGost(this, ThreadLocalRandom.current()
+				addNewObject(new EGhost(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eGhost.getWidth())));
 			} else  {
 				addNewObject(new ETree(this, ThreadLocalRandom.current()
